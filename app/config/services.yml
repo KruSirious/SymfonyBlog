@@ -1,0 +1,47 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+#    service_name:
+#        class: AppBundle\Directory\ClassName
+#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+
+services:
+   sonata.admin.article:
+        class: AppBundle\Admin\ArticleAdmin
+        arguments: [~, AppBundle\Entity\Article, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Article", label: "Article" }
+        # calls:
+        # - [setBaseRouteName, ['article'] ]
+        # - [setBaseRoutePattern, ['article'] ]
+
+   sonata.admin.user:
+        class: AppBundle\Admin\UserAdmin
+        arguments: [~, AppBundle\Entity\User, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Article", label: "User" }
+        # calls:
+        # - [setBaseRouteName, ['user'] ]
+        # - [setBaseRoutePattern, ['user'] ]
+
+   sonata.admin.category:
+        class: AppBundle\Admin\CategoryAdmin
+        arguments: [~, AppBundle\Entity\Category, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Article", label: "Category" }
+        # calls:
+        # - [setBaseRouteName, ['category'] ]
+        # - [setBaseRoutePattern, ['category'] ]
+
+   sonata.admin.tag:
+           class: AppBundle\Admin\UserAdmin
+           arguments: [~, AppBundle\Entity\User, ~]
+           tags:
+               - { name: sonata.admin, manager_type: orm, group: "Article", label: "Tag" }
+           # calls:
+           # - [setBaseRouteName, ['tag'] ]
+           # - [setBaseRoutePattern, ['tag'] ]
+
