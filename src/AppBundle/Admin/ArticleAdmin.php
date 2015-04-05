@@ -24,7 +24,7 @@ protected function configureFormFields(FormMapper $formMapper)
      ->add('user')
      ->add('categories')
      ->add('tags')
-
+     ->add('date')
 ;
 }
 
