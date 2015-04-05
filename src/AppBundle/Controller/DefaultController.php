@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/article-{year}/{id}/comments/{page}",
+     * @Route("/article/{id}/comments/{page}",
      * name="slug",
      * defaults={
      * "page"="1"

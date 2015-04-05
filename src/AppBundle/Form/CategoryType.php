@@ -1,11 +1,8 @@
 <?php
-
 namespace AppBundle\Form;
-
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
-
 class CategoryType extends AbstractType
 {
     /**
@@ -16,6 +13,7 @@ class CategoryType extends AbstractType
     {
         $builder
             ->add('name')
+            ->add('articles')
         ;
     }
     /**

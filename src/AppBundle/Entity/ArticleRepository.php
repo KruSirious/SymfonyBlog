@@ -23,6 +23,7 @@ class ArticleRepository extends EntityRepository
             ->select('a, u, c, t')
             ->leftJoin('a.user','u',Expr\Join::WITH)
             ->leftjoin('a.categories','c',Expr\Join::WITH)
+            ->leftJoin('a.tags', 't', Expr\Join::WITH)
             ->orderBy('a.id', 'DESC');
 
         ;

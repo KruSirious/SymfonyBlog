@@ -27,6 +27,7 @@ class CategoryAdmin extends Admin
     {
         $formMapper
             ->add('name')
+            ->add('articles')
 
         ;
     }
@@ -39,8 +40,9 @@ class CategoryAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('name');
-
+            ->add('name')
+            ->add('article')
+        ;
     }
 
     /**
@@ -53,6 +55,7 @@ class CategoryAdmin extends Admin
         $listMapper
             ->addIdentifier('id')
             ->add('name')
+            ->add('articles')
 
         ;
     }
@@ -68,6 +71,7 @@ class CategoryAdmin extends Admin
         $showMapper
             ->add('id')
             ->add('name')
+            ->add('articles')
 
         ;
     }
